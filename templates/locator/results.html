@@ -1,0 +1,55 @@
+
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GeoTrace | Location Results</title>
+
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet"
+          href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+    <link rel="stylesheet" href="{% static 'css/results.css' %}">
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <a href="/" class="brand">
+            <span class="brand-icon">⌖</span>
+            <span>GeoTrace</span>
+        </a>
+        <a href="/" class="back-link">← Upload more photos</a>
+    </nav>
+
+    <main class="results-container">
+
+        <section class="results-intro">
+            <span class="eyebrow">YOUR PHOTO JOURNEY</span>
+            <h1>Location <span>results.</span></h1>
+            <p>Explore the location information associated with your photographs.</p>
+        </section>
+
+        <div class="demo-notice">
+            <strong>Illustrative preview</strong>
+            <span>
+                The location details below are sample data for the interface.
+                Actual results will appear after backend integration.
+            </span>
+        </div>
+
+        <div id="resultsList"></div>
+
+    </main>
+
+    <footer>
+        <span>GeoTrace</span>
+        <span>Discover the places behind your pictures.</span>
+    </footer>
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="{% static 'js/results.js' %}"></script>
+
+</body>
+</html>
